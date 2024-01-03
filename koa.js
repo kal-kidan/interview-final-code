@@ -8,8 +8,8 @@ const Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
 
-// authMiddleware creatadded while I was in the call and added here after the call is closed since I fogot to add it in the call :)
-router.get('/cron',userMiddleware, userController)
+// authMiddleware created while I was in the call and added here after the call is closed since I fogot to add it in the call :)
+router.get('/cron',authMiddleware, userController)
 
 
 app.use(async (ctx, next) => {
